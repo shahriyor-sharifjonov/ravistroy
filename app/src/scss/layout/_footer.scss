@@ -1,0 +1,97 @@
+.footer{
+    &__body{
+        padding: 10px 15px; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media(1200){
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 25px;
+            padding: 30px 15px;
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 30px;
+        @include media(768){
+            flex-direction: column;
+            row-gap: 15px;   
+        }
+    }
+    &__link{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #222222;        
+    }
+    &__btn{
+        padding: 12px 30px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        background: #F7951E;
+        border-radius: 5px;
+    }
+    &__bot{
+        background: #F1F1F1;
+        &-body{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 15px;
+            @include media(1200){
+                flex-direction: column-reverse;
+                row-gap: 15px;   
+            }
+        }
+    }
+    &__privacy{
+        font-size: 14px;
+        line-height: 24px;
+        text-decoration-line: underline;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #222222;        
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.dn{
+            @include media(1200){
+                display: none;   
+            }
+        }
+        &.df{
+            display: none;
+            @include media(1200){
+                display: flex;   
+            }
+        }
+        img{
+            margin-right: 5px;
+        }
+    }
+    &__tel{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 24px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #222222;        
+        &.dn{
+            @include media(1200){
+                display: none;   
+            }
+        }
+        &.df{
+            display: none;
+            @include media(1200){
+                display: flex;   
+            }
+        }
+    }
+}
