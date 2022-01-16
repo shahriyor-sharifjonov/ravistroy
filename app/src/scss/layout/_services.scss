@@ -8,6 +8,10 @@
     }
     &__slider{
         padding-right: 50px;
+        display: none;
+        @include media(1200){
+            display: block;   
+        }
     }
     &__link{
         position: absolute;
