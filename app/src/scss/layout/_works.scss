@@ -1,0 +1,133 @@
+.works{
+    background: #FAFAFA;
+    padding: 50px 0;
+    &__body{
+        position: relative;
+    }
+    .swiper{
+        &-button{
+            &-prev{
+                top: 170px;    
+                left: -40px;                        
+                margin-top: 0;
+                @include media(1250){
+                    left: -10px;   
+                }
+                @include media(1200){
+                    left: -40px;
+                }
+                @include media(1080){
+                    left: -10px;   
+                }
+                @include media(992){
+                    left: -40px;
+                }
+                @include media(830){
+                    left: -10px;   
+                }
+                @include media(776){
+                    left: 20px;
+                    top: 180px;
+                }
+                @include media(576){
+                    top: 150px;
+                }
+                &::after{
+                    content: url('../images/prev-2.svg');
+                }
+            }
+            &-next{
+                top: 170px;
+                right: -40px;             
+                margin-top: 0;
+                @include media(1250){
+                    right: -10px;   
+                }
+                @include media(1200){
+                    right: -40px;
+                }
+                @include media(1080){
+                    right: -10px;   
+                }
+                @include media(992){
+                    right: -40px;
+                }
+                @include media(830){
+                    right: -10px;   
+                }
+                @include media(776){
+                    right: 20px;
+                    top: 180px;
+                }
+                @include media(576){
+                    top: 150px;
+                }
+                &::after{
+                    content: url('../images/next-2.svg');
+                }
+            }
+        }
+    }
+    &__item{
+        &-img{
+            width: 100%;
+            border-radius: 7px;
+            margin-bottom: 20px;
+            height: 237px;
+            object-fit: cover;
+        }
+        &-title{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #222222;
+            margin-bottom: 8px;  
+        }
+        &-p{
+            font-size: 16px;
+            line-height: 24px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #222222;
+            margin-bottom: 10px;    
+        }
+        &-price{
+            font-size: 16px;
+            line-height: 24px;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #222222;
+            margin-bottom: 13px;
+        }
+    }
+    &__buttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 30px;
+    }
+    &__btn{
+        width: 50%;
+        background: #F7951E;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+        height: 50px;
+        &_white{
+            border: 1px solid #F7951E;
+            box-sizing: border-box;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            background: #fff;
+            color: #F7951E;
+        }
+    }
+}

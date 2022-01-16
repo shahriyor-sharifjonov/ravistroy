@@ -8,9 +8,7 @@ const menuToggle = () => {
   headerButton.classList.toggle("open");
   headerMenu.classList.toggle("open");
 };
-
 headerButton.onclick = menuToggle;
-
 window.onclick = (e: MouseEvent) => {
   if ( menuOpened && !e.composedPath().includes(headerButton) && !e.composedPath().includes(headerMenu)){
     menuToggle();
@@ -41,5 +39,26 @@ var swiper = new Swiper(".services__slider ", {
       slidesPerView: 2,
       spaceBetween: 10,
     },
+  },
+});
+
+var swiper = new Swiper(".works__slider ", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  grabCursor: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    }
   },
 });
