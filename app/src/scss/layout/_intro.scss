@@ -112,24 +112,28 @@
     }
     .swiper{
         &-button{
+            &-prev{
+                &::after{
+                    content: url('../images/prev.svg');
+                }
+            }
+            &-next{
+                &::after{
+                    content: url('../images/next.svg');
+                }
+            }
             @include media(992){
                 &-prev{
                     margin-top: 0;
                     top: auto;
                     bottom: 15px;
                     left: calc(50% - 40px);
-                    &::after{
-                        content: url('../images/prev.svg');
-                    }
                 }
                 &-next{
                     margin-top: 0;
                     top: auto;
                     bottom: 15px;
                     right: calc(50% - 40px);
-                    &::after{
-                        content: url('../images/next.svg')
-                    }
                 }
             }
         }

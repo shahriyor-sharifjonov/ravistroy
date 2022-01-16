@@ -30,3 +30,16 @@ var swiper = new Swiper(".intro__slider ", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+var swiper = new Swiper(".services__slider ", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  grabCursor: true,
+  loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+  },
+});

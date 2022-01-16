@@ -1,0 +1,125 @@
+.services{
+    padding: 50px 0;
+    &__body{
+        position: relative;
+        @include media(768){
+            padding-bottom: 50px;
+        }
+    }
+    &__slider{
+        padding-right: 50px;
+    }
+    &__link{
+        position: absolute;
+        top: 13px;
+        right: 15px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #222222;
+        @include media(768){
+            bottom: 0;
+            top: auto;
+            right: 50%;
+            transform: translateX(50%);
+        }
+        img{
+            margin-left: 6px;
+        }
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #222222;
+        margin-bottom: 30px;
+        @include media(576){
+            font-size: 26px;
+            line-height: 34px;
+            margin-bottom: 22px;
+        }
+    }
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 30px;
+        &.desktop{
+            @include media(1200){
+                display: none;   
+            }
+        }
+    }
+    &__col{
+        width: 50%;
+    }
+    &__many{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex: 1 1 auto;
+    }
+    &__item{
+        width: 100%;
+        height: 100%;
+        line-height: 0;
+        border-radius: 7px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        &-img{
+            width: 100%;
+            @include media(1200){
+                height: 280px;
+                object-fit: cover;   
+            }
+            @include media(380){
+                height: 170px;
+            }
+        }
+        &-content{
+            border: 1px solid #D0D0D0;
+            border-top: none;
+            line-height: 120%;
+            border-radius: 0 0 7px 7px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 35px 30px 35px;
+            flex: 1 1 auto;
+        }
+        &-title{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #222222;
+            margin-bottom: 20px;
+        }
+        &-btn{
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            background: #F7951E;
+            border-radius: 5px;
+            padding: 12px 64px;
+            color: #FFFFFF;            
+        }
+    }
+}
