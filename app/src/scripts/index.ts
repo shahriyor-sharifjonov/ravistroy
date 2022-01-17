@@ -42,6 +42,7 @@ var swiper = new Swiper(".services__slider ", {
   },
 });
 
+
 var swiper = new Swiper(".works__slider ", {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -60,5 +61,19 @@ var swiper = new Swiper(".works__slider ", {
       slidesPerView: 3,
       spaceBetween: 30,
     }
+  },
+});
+
+
+var swiper = new Swiper(".why__slider ", {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  grabCursor: true,
+  loop: false,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
   },
 });
