@@ -49,3 +49,82 @@ ul{
     align-items: center;
     width: max-content;
 }
+
+.promo{
+    background: url('../images/promo.png') center / cover no-repeat;
+    padding: 50px 0px;
+    @include media(768){
+        background-position: 37% 100%;
+    }
+    @include media(576){
+        background-position: 45% 100%;
+    }
+    &__title{
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 43px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #E41318;        
+        margin-bottom: 17px;
+        @include media(992){
+            font-size: 48px;
+            line-height: 120%;
+        }
+        @include media(576){
+            font-size: 30px;
+            line-height: 43px;
+            margin-bottom: 2px;
+        }
+    }
+    &__subtitle{
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #222222;
+        margin-bottom: 22px;
+        max-width: 432px;
+        @include media(992){
+            font-size: 43px;
+            line-height: 120%;
+        }
+        @include media(576){
+            font-size: 22px;
+            line-height: 24px;
+            margin-bottom: 6px;
+            max-width: 198px;
+        }
+    }
+    &__p{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #222222;        
+        margin-bottom: 25px;
+        max-width: 500px;
+        @include media(992){
+            max-width: 429px;
+        }
+        @include media(576){
+            font-size: 16px;
+            line-height: 22px;
+            max-width: 216px;
+        }
+    }
+    &__btn{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        background: #F7951E;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 177px;
+        height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+}
