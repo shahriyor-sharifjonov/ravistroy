@@ -1,0 +1,9 @@
+mixin form()
+    .form 
+        .form__body.container 
+            h2.form__title ОСТАЛИСЬ ВОПРОСЫ? ЗВОНИТЕ!
+            p.form__p Оставьте нам свое имя и телефон.<br> В ближайшее время с вами свяжется наш консультант и ответит на все ваши вопросы, проконсультирует по стоимости проектирования и строительства.
+            form(action="#!").form__content
+                input(type="text" placeholder="Ваше имя" required).form__input
+                input(type="text" placeholder="Номер вашего телефона" required).form__input
+                button(type='submit').form__btn Оставить заявку
