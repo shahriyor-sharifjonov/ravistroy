@@ -12,7 +12,7 @@
         }
     }
     &__slider{
-        display: none;
+        display: none; 
         padding-right: 100px;
         padding-left: 15px;
         @include media(992){
