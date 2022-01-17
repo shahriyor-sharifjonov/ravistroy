@@ -77,3 +77,25 @@ var swiper = new Swiper(".why__slider ", {
     },
   },
 });
+
+
+var swiper = new Swiper(".reviews__slider ", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  grabCursor: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    }
+  },
+});
