@@ -1,0 +1,79 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap")
+        link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel="stylesheet" href="styles/index.css")
+    body 
+        include components/header.pug 
+        +header
+        main.main 
+            include components/intro.pug 
+            +intro
+            include components/services.pug 
+            +services
+            .calc 
+                form(action="index.html").calc__body.container 
+                    h2.calc__title Онлайн калькулятор ремонта
+                    .calc__row 
+                        .calc__item 
+                            input(type="radio" name="type" checked id="first")
+                            label(for="first") Комната
+                        .calc__item 
+                            input(type="radio" name="type" id="second")
+                            label(for="second") Квартира
+                        .calc__item 
+                            input(type="radio" name="type" id="third")
+                            label(for="third") Новострой
+                    .calc__row 
+                        select(name="room").calc__select
+                            option(value="Жилая комната") Жилая комната 
+                            option(value="Жилая комната") Жилая комната 
+                            option(value="Жилая комната") Жилая комната 
+                        select(name="meter").calc__select
+                            option(value="Жилая комната") 10 м&sup2;</sup>
+                            option(value="Жилая комната") 10 м&sup2;</sup>
+                            option(value="Жилая комната") 10 м&sup2;</sup>
+                        select(name="remont").calc__select
+                            option(value="Жилая комната") Косметический ремонт
+                            option(value="Жилая комната") Косметический ремонт
+                            option(value="Жилая комната") Косметический ремонт
+                    hr.calc__hr 
+                    .calc__bot  
+                        .calc__bot-left
+                            .calc__col 
+                                img(src="images/calc-1.png", alt="")
+                                p.calc__col-p Стоимость ремонта<br>комнаты:
+                                p.calc__result 27 000  руб.
+                            .calc__col 
+                                img(src="images/calc-2.png", alt="")
+                                p.calc__col-p Стоимость черновых<br>материалов:
+                                p.calc__result 1 620  руб.
+                            .calc__col 
+                                img(src="images/calc-3.png", alt="")
+                                p.calc__col-p Примерные сроки<br>ремонта:
+                                p.calc__result 10 дн.
+                        .calc__bot-right
+                            input(type="tel" placeholder="Номер вашего телефона" required).calc__select
+                            button(type="submit").calc__btn Заказать ремонт
+
+            include components/works.pug 
+            +works
+            include components/why.pug 
+            +why
+            include components/about.pug 
+            +about
+            include components/form.pug 
+            +form
+            include components/reviews.pug 
+            +reviews
+            include components/promo.pug 
+            +promo
+        include components/footer.pug 
+        +footer
+        script(src="https://unpkg.com/swiper/swiper-bundle.min.js") 
+        script(src="scripts/index.js") 

@@ -18,6 +18,20 @@ window.onclick = (e: MouseEvent) => {
   }
 };
 
+function openSearch(el){
+  el.classList.add('active');
+}
+
+window.addEventListener('click', function(e: any){
+  if(document.querySelector('.nav__opensearch.active')){
+    if(e.target.classList.contains('nav__opensearch') || e.target.classList.contains('nav__input') || e.target.classList.contains('nav__search')){
+
+    }else{
+      document.querySelector('.nav__opensearch.active').classList.remove('active')
+    }
+  }
+})
+
 var swiper = new Swiper(".intro__slider ", {
   slidesPerView: 1,
   spaceBetween: 100,

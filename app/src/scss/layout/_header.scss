@@ -116,10 +116,12 @@
 .nav{
     padding: 10px 0;
     background: #222222;
+    position: relative;
     &__body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
         @include media(768){
             column-gap: 15px;   
         }
@@ -129,6 +131,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        z-index: 40;
+        position: relative;
         @include media(1200){
             position: fixed;
             top: 0;
@@ -167,6 +171,7 @@
             align-items: center;
             justify-content: space-between;
             z-index: 2;
+            position: relative;
             @include media(1200){
                 background: #FFFFFF;
                 border-radius: 15px;
@@ -199,6 +204,34 @@
             line-height: 46px;
         }
     }
+    &__phone{
+        color: #fff;
+        display: none;
+        @include media(1200){
+            display: block;
+        }
+    }
+    &__opensearch{
+        display: none;
+        @include media(768){
+            display: block;
+            &.active{
+                display: none;
+                &~.nav__form{
+                    display: flex;
+                    position: absolute;
+                    top: -4px;
+                    left: 15px;
+                    right: 15px;
+                    height: 38px;
+                    max-width: calc(100% - 30px);
+                    background: #383838;
+                    width: calc(100% - 30px);
+                    z-index: 1;
+                }
+            }
+        }
+    }
     &__form{
         background: #FFFFFF10;
         border-radius: 5px;
@@ -208,6 +241,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include media(992){
+            max-width: 300px;
+        }
+        @include media(768){
+            display: none;
+        }
     }
     &__input{
         background: none;
@@ -216,12 +255,14 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
+        flex: 1 1 auto;
         color: #FFFFFF;
-    }
-    &__input::placeholder{
-        color: #fff;
-        line-height: 24px;
-        font-size: 16px;
+        padding-right: 10px;
+        &::placeholder{
+            color: #fff;
+            line-height: 24px;
+            font-size: 16px;
+        }
     }
     &__dn{
         display: none;

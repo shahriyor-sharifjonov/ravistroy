@@ -19,6 +19,7 @@ mixin header()
         .nav__body.container 
             button.header__button 
                 span.header__button-line 
+            a(href="tel:+74993227771").header__phone.nav__phone +7 499 322 77 71
             .nav__menu 
                 .nav__menu-close
                 .nav__menu-body
@@ -47,7 +48,9 @@ mixin header()
                                 | Пн - ВС: с 10:00 до 20:00
                         .nav__dn-item 
                             a(href="#!").nav__dn-btn Вызвать замерщика
+            button(type='button' onclick="openSearch(this)").nav__opensearch
+                img(src="images/search.png", alt="").nav__opensearch
             form(action="index.html").nav__form
-                input(type="text" placeholder="Поиск" ).nav__input
+                input(type="search" placeholder="Поиск" ).nav__input
                 button(type="submit").nav__search 
                     img(src="images/search.png", alt="")
